@@ -5,11 +5,14 @@ import { drawChromeBoiAtCoords, toggleCycling, resize } from './canvasHelpers.js
 export default class ChromeBoisDomain extends Component {
   
   handleMouseMove = (event) => {
+    // use debugger to see what event is 
+    // look up how to get the quardinents on google
+    // console.log(event.clientX) see what it is recording
     drawChromeBoiAtCoords(event.clientX, event.clientY)
     event.clientX
     event.clientY
 
-    toggleCycling()
+    // toggleCycling()
     // resize("+", "-")
     
     
@@ -22,8 +25,8 @@ export default class ChromeBoisDomain extends Component {
   }
 
   handleKeyPress = (event) => {
-
-    // resize("+")
+    // debugger --- hit any key, look at what event is look through and see what key is
+    
     if (event.key === "a") {
     resize("+") 
       } if (event.key === "s") {
